@@ -55,15 +55,19 @@ backToTopButton.addEventListener("click", goToTop);
 //
 //
 //
+let mod=localStorage.mode;
 let lightmode=document.querySelector('.LightMode');
 let darkmode=document.querySelector('.DarkMode');
 lightmode.onclick=function (){
   let file=document.querySelector('head link:last-child ');
   console.log(file);
   file.href='light.css';
+  localStorage.setItem('mode','light');
 }
 darkmode.onclick=function (){
   let file=document.querySelector('head link:last-child');
   console.log(file);
   file.href='dark.css';
+  localStorage.setItem('mode','dark');
 }
+document.querySelector('head link:last-child').href=mod+'.css';
