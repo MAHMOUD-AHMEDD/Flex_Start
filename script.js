@@ -52,3 +52,18 @@ const goToTop = () => {
   });
 };
 backToTopButton.addEventListener("click", goToTop);
+//
+//
+//
+let lightmode=document.querySelector('.LightMode');
+let darkmode=document.querySelector('.DarkMode');
+lightmode.onclick=function (){
+  let file=document.querySelector('head link:last-child ');
+  console.log(file);
+  file.href='light.css';
+}
+darkmode.onclick=function (){
+  let file=document.querySelector('head link:last-child');
+  console.log(file);
+  file.href='dark.css';
+}
